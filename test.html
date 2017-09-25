@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>psalt</title>
+    
+    <link rel="stylesheet" href="./src/assets/css/mediaelementplayer.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>    
+    <script src="./src/assets/js/mediaelement-and-player.min.js"></script>
+
+    <style>
+        * { padding: 0; margin: 0;}
+        body {
+            max-width: 100%;
+            height: 100%;
+        }
+        .my-audio {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .mejs__controls {
+            height: 100% !important;
+            }
+            .mejs__time-rail {
+                height: 100%;
+                padding: 0 !important;
+            }
+                .mejs__time-total {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                }
+                    .mejs__time-loaded, .mejs__time-buffering, .mejs__time-current, .mejs__time-hovered {
+                        height: 100%;
+                    }
+    </style>
+  </head>
+  <body>
+        <div class="my-audio">
+            <audio class="mejs__player" src="./src/assets/kommatia/the-pathi.mp3" style="max-width:100%;"></audio>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $('video, audio').mediaelementplayer();
+            });
+        </script>
+  </body>
+</html>
