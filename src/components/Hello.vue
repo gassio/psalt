@@ -1,10 +1,33 @@
 <template>
 	<div class="hello">
-		<h1>Hello</h1>
-
-		<div class="my-audio">
-			<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
-		</div>
+		<el-row>
+			<el-col :xs="24" :sm="6" :md="6" :lg="6">
+				<h1 style="margin-bottom: 15px;">Μεγάλη Δευτέρα</h1>
+				<el-menu default-active="2" class="el-menu-vertical-demo">
+					<el-menu-item index="1">Θεός Κύριος</el-menu-item>
+					<el-menu-item index="2">Καθίσματα</el-menu-item>
+					<el-menu-item index="3">Κανόνες</el-menu-item>
+					<el-menu-item index="4">Μεσώδια Καθίσματα</el-menu-item>
+					<el-menu-item index="5">Καταβασίες</el-menu-item>
+					<el-menu-item index="6">Τιμιωτέρα</el-menu-item>
+					<el-menu-item index="7">Θ' Ωδή</el-menu-item>
+					<el-menu-item index="8">Εξαποστειλάρια</el-menu-item>
+					<el-menu-item index="9">Πάσα πνοή</el-menu-item>
+					<el-menu-item index="10">Στιχηρά αίνων</el-menu-item>
+					<el-menu-item index="11">Δοξαστικό</el-menu-item>
+					<el-menu-item index="12">Δοξολογία</el-menu-item>
+					<el-menu-item index="13">Απολυτικίον</el-menu-item>
+				</el-menu>
+			</el-col>
+			<el-col :xs="24" :sm="18" :md="18" :lg="18">
+				<el-row>
+					<h1 style="margin-top: 150px;">pdf.js</h1>
+				</el-row>
+				<div class="my-audio">
+					<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
+				</div>
+			</el-col>
+		</el-row>
 	</div>
 </template>
 
@@ -22,21 +45,32 @@ export default {
 			// $('body').css('background-color', 'red')
 			$('video, audio').mediaelementplayer();
 		});
-	}
+	},
+	methods: {
+    }
 }
 </script>
 
 <style>
 
+.el-menu-item {
+	height: 35px;
+	padding-left: 10px;
+	line-height: 35px;
+	text-align: left;
+}
+
 .my-audio {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
-	left: 0;
 }
-.mejs__controls {
+.mejs__container {
+	width: 75vw !important;
+}
+
+	.mejs__controls {
 		height: 100% !important;
-		}
+	}
 		.mejs__time-rail {
 				height: 100%;
 				padding: 0 !important;

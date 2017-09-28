@@ -14,11 +14,11 @@ export default {
 * { 
   padding: 0; 
   margin: 0;
+  font-family: 'Tinos', serif;
 }
 
 body {
-    max-width: 100%;
-    height: 100%;
+
 }
 
 #app {
@@ -27,6 +27,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>
