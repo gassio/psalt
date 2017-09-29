@@ -14,7 +14,7 @@ export default {
 * { 
   padding: 0; 
   margin: 0;
-  font-family: 'Tinos', serif;
+  font-family: 'Tinos', 'Palatino Linotype', 'Georgia', serif;
 }
 
 body {

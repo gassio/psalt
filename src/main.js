@@ -6,6 +6,7 @@ import router from './router'
 require('./assets/js/jquery.js')
 require('./assets/js/mediaelement-and-player.min.js')
 require('./assets/css/mediaelementplayer.min.css')
+require('./assets/js/pdfobject.min.js')
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'

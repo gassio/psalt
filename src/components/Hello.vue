@@ -22,9 +22,10 @@
 			<el-col :xs="24" :sm="18" :md="18" :lg="18">
 				<el-row>
 					<h1 style="margin-top: 150px;">pdf.js</h1>
+					<div id="#example1"></div>
 				</el-row>
 				<div class="my-audio">
-					<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
+						<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
 				</div>
 			</el-col>
 		</el-row>
@@ -33,13 +34,17 @@
 
 <script>
 export default {
-	name: 'hello',
+	components: {
+		keimeno: 'https://cdn.mozilla.net/pdfjs/helloworld.pdf'
+	},
 	data () {
 		return {
 			kommati: 'http://www.orangefreesounds.com/wp-content/uploads/2017/09/Munsters-theme-song.mp3?_=1'
 		}
 	},
 	mounted() {
+
+		// PDFObject.embed("https://cdn.mozilla.net/pdfjs/helloworld.pdf", "#example1");
 
 		$(document).ready(function(){
 			// $('body').css('background-color', 'red')
@@ -53,34 +58,34 @@ export default {
 
 <style>
 
-.el-menu-item {
-	height: 35px;
-	padding-left: 10px;
-	line-height: 35px;
-	text-align: left;
-}
-
-.my-audio {
-	position: fixed;
-	bottom: 0;
-}
-.mejs__container {
-	width: 75vw !important;
-}
-
-	.mejs__controls {
-		height: 100% !important;
+	.el-menu-item {
+		height: 35px;
+		padding-left: 10px;
+		line-height: 35px;
+		text-align: left;
 	}
-		.mejs__time-rail {
-				height: 100%;
-				padding: 0 !important;
+
+	.my-audio {
+		position: fixed;
+		bottom: 0;
+	}
+	.mejs__container {
+		width: 75vw !important;
+	}
+
+		.mejs__controls {
+			height: 100% !important;
 		}
-				.mejs__time-total {
-						width: 100%;
-						height: 100%;
-						margin: 0;
-				}
-						.mejs__time-loaded, .mejs__time-buffering, .mejs__time-current, .mejs__time-hovered {
-								height: 100%;
-						}
+			.mejs__time-rail {
+					height: 100%;
+					padding: 0 !important;
+			}
+					.mejs__time-total {
+							width: 100%;
+							height: 100%;
+							margin: 0;
+					}
+							.mejs__time-loaded, .mejs__time-buffering, .mejs__time-current, .mejs__time-hovered {
+									height: 100%;
+							}
 </style>
