@@ -1,3 +1,31 @@
+<script>
+	import pdf from 'vue-pdf'
+
+	export default {
+		components: {
+			pdf: pdf
+		},
+		data () {
+			return {
+				keimeno: './static/ta-pathi.pdf',
+				kommati: './static/the-pathi.mp3',
+				page: 1,
+				numPages: 0
+			}
+		},
+		mounted() {
+
+
+			$(document).ready(function(){
+				// $('body').css('background-color', 'red')
+				$('video, audio').mediaelementplayer();
+			});
+		},
+		methods: {
+		}
+	}
+</script>
+
 <template>
 	<div class="hello">
 		<el-row>
@@ -21,36 +49,18 @@
 			</el-col>
 			<el-col :xs="24" :sm="18" :md="18" :lg="18">
 				<el-row>
-					<img src="../assets/kommatia/1.jpg" height="800">
+				  	<el-input-number v-model="page" :min="1" :max="numPages" class="num-pages"></el-input-number>
+					<div class="pdf-container">
+						<pdf :src="keimeno" class="my-pdf" :page="page" @numPages="numPages = $event"></pdf>
+					</div>
 				</el-row>
 				<div class="my-audio">
-					<audio class="mejs__player" src="kommati" style="max-width:100%;"></audio>
+					<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
 				</div>
 			</el-col>
 		</el-row>
 	</div>
 </template>
-
-<script>
-export default {
-	data () {
-		return {
-			keimeno: 'https://cdn.mozilla.net/pdfjs/helloworld.pdf',
-			kommati: '../assets/kommatia/the-pathi.mp3'
-		}
-	},
-	mounted() {
-
-
-		$(document).ready(function(){
-			// $('body').css('background-color', 'red')
-			$('video, audio').mediaelementplayer();
-		});
-	},
-	methods: {
-    }
-}
-</script>
 
 <style>
 
@@ -84,4 +94,19 @@ export default {
 							.mejs__time-loaded, .mejs__time-buffering, .mejs__time-current, .mejs__time-hovered {
 									height: 100%;
 							}
+
+.num-pages {
+	z-index: 5;
+}
+
+.pdf-container {
+	display: flex;
+	justify-content: center;
+	z-index: 0;
+}
+	.my-pdf {
+		width: 75vw;
+		height: 75vh;
+		margin-top: -100px;
+	}
 </style>
