@@ -32,15 +32,15 @@
 			<el-col :xs="24" :sm="6" :md="6" :lg="6">
 				<h1 style="margin-bottom: 15px;">Μεγάλη Δευτέρα</h1>
 				<el-menu default-active="2" class="el-menu-vertical-demo">
-					<el-menu-item index="1">Θεός Κύριος</el-menu-item>
-					<el-menu-item index="2">Καθίσματα</el-menu-item>
-					<el-menu-item index="3">Κανόνες</el-menu-item>
-					<el-menu-item index="4">Μεσώδια Καθίσματα</el-menu-item>
-					<el-menu-item index="5">Καταβασίες</el-menu-item>
-					<el-menu-item index="6">Τιμιωτέρα</el-menu-item>
-					<el-menu-item index="7">Θ' Ωδή</el-menu-item>
-					<el-menu-item index="8">Εξαποστειλάρια</el-menu-item>
-					<el-menu-item index="9">Πάσα πνοή</el-menu-item>
+					<el-menu-item index="1" @click="kommati='./static/allilouia-argon.mp3'; keimeno='./static/allilouia-argon.pdf'">Αλληλούια αργόν</el-menu-item>
+					<el-menu-item index="2" @click="kommati='./static/ta-pathi.mp3'; keimeno='./static/ta-pathi.pdf'">Καθίσματα</el-menu-item>
+					<el-menu-item index="3" @click="">Κανόνες</el-menu-item>
+					<el-menu-item index="4" @click="">Μεσώδια Καθίσματα</el-menu-item>
+					<el-menu-item index="5" @click="">Καταβασίες</el-menu-item>
+					<el-menu-item index="6" @click="">Τιμιωτέρα</el-menu-item>
+					<el-menu-item index="7" @click="">Θ' Ωδή</el-menu-item>
+					<el-menu-item index="8" @click="">Εξαποστειλάρια</el-menu-item>
+					<el-menu-item index="9" @click="">Πάσα πνοή</el-menu-item>
 					<el-menu-item index="10">Στιχηρά αίνων</el-menu-item>
 					<el-menu-item index="11">Δοξαστικό</el-menu-item>
 					<el-menu-item index="12">Δοξολογία</el-menu-item>
