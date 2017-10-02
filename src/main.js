@@ -5,8 +5,11 @@ import router from './router'
 // Libraries
 require('./assets/js/jquery.js')
 require('./assets/js/mediaelement-and-player.min.js')
+require('./assets/js/http-vue-loader.js')
 require('./assets/css/mediaelementplayer.min.css')
-require('./assets/js/pdfobject.min.js')
+
+
+// this['vue-resize-sensor'] = httpVueLoader('https://raw.githubusercontent.com/FranckFreiburger/vue-resize-sensor/master/src/resize-sensor.vue', 'resize-sensor');
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'

@@ -21,11 +21,10 @@
 			</el-col>
 			<el-col :xs="24" :sm="18" :md="18" :lg="18">
 				<el-row>
-					<h1 style="margin-top: 150px;">pdf.js</h1>
-					<div id="#example1"></div>
+					<img src="../assets/kommatia/1.jpg" height="800">
 				</el-row>
 				<div class="my-audio">
-						<audio class="mejs__player" :src="kommati" style="max-width:100%;"></audio>
+					<audio class="mejs__player" src="kommati" style="max-width:100%;"></audio>
 				</div>
 			</el-col>
 		</el-row>
@@ -34,17 +33,14 @@
 
 <script>
 export default {
-	components: {
-		keimeno: 'https://cdn.mozilla.net/pdfjs/helloworld.pdf'
-	},
 	data () {
 		return {
-			kommati: 'http://www.orangefreesounds.com/wp-content/uploads/2017/09/Munsters-theme-song.mp3?_=1'
+			keimeno: 'https://cdn.mozilla.net/pdfjs/helloworld.pdf',
+			kommati: '../assets/kommatia/the-pathi.mp3'
 		}
 	},
 	mounted() {
 
-		// PDFObject.embed("https://cdn.mozilla.net/pdfjs/helloworld.pdf", "#example1");
 
 		$(document).ready(function(){
 			// $('body').css('background-color', 'red')
